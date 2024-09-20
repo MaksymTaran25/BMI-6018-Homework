@@ -131,39 +131,39 @@ print("Assignment 1")
 one_a = [0 , 1, 2, 3, 4, 5, 6, 7, 8, 9] # created list to perfrom different methods on it
 print("The answer to 1.a is: ", one_a)
 
-one_b = list(one_a)
-one_b[5] += 3
+one_b = list(one_a) # assigned values of list one_a to one_b
+one_b[5] += 3 # added 3 to the elevement with index 5 of list one_b
 print("The answer to 1.b is: ", one_b)
 
-one_c = [float(i) for i in one_a ]
+one_c = [float(i) for i in one_a ] #coerced all elements of list one_b to float and assignes it to list one_c
 print("The answer to 1.c is: ", one_c)
 
 one_d = set(one_a) # created set one_d from list to perfrom different methods on it
 print("The answer to 1.d is: ", one_d)
 
-one_e = set(one_d) 
-one_e.add(10)
+one_e = set(one_d)  # assigned values of list one_d to one_e
+one_e.add(10) # appended 10 to the list one_e
 print("The answer to 1.e is: ", one_e)
 
-one_f = one_d.pop()
+one_f = one_d.pop() #poped item from list one_f
 print("The answer to 1.f is: ", one_f)
 
-one_g = len(one_d)
+one_g = len(one_d) # found the length of list one_d
 print("The answer to 1.g is: ", one_g)
 
-if len(one_a) == len(one_d): 
+if len(one_a) == len(one_d): # in case length of both lists are equal print that
     one_h = f"The answer to 1.h is: Yes, the length of both is {len(one_a)}" 
-else:
+else: #in other case print that they are not equal
     one_h = f"The answer to 1.h is: No, the length of list is {len(one_a)} and the length of set is {len(one_d)}"
 print(one_h)
 
-one_i = list(one_d) + one_a
+one_i = list(one_d) + one_a # coerced set one_d to list and combined with list one_a
 print("The answer to 1.i is: ", one_i)
 
-one_j = set(one_i)
+one_j = set(one_i) # coerced list one_i to set one_j
 print("The answer to 1.j is: ", one_j)
 
-one_k = len(one_j)
+one_k = len(one_j) # assigned amount of elements one_j to one_k
 print("The answer to 1.k is: ", one_k)
 
 
@@ -200,16 +200,16 @@ two_d = {
     two_patient_dictionary_dango["name"] : two_patient_dictionary_dango["year"],
     two_patient_dictionary_mochi["name"] : two_patient_dictionary_mochi["year"]
 }
-two_d["Mochi"] = 2019
+two_d["Mochi"] = 2019 # setted Mochi's year to 2019
 print("The answer to 2.d is: ", two_d)
 
-two_e = list(two_d.keys())
+two_e = list(two_d.keys()) #coerced keys of 2.d into a list two_e
 print("The answer to 2.e is: ", two_e)
 
-two_f = list(two_d.values())
+two_f = list(two_d.values()) #coerced values of 2.d into a list two_e
 print("The answer to 2.f is: ", two_f)
 
-two_g = {two_e: two_f for two_e, two_f in zip(two_e, two_f)}
+two_g = {two_e: two_f for two_e, two_f in zip(two_e, two_f)} #zipped combination of 2.e and 2.f into dictionary 
 print("The answer to 2.g is: ", two_g)
 
 print("Assignment 3")
@@ -220,10 +220,10 @@ three_setC = {3,5,7,9}
 three_setD = {2,4,6,8}
 three_setE = {1,2,3,4}
 
-three_a = three_setE.issubset(three_setA)
+three_a = three_setE.issubset(three_setA) #checks uf set e us a subset of set a
 print("The answer to 3.a is: ", three_a)
 
-three_b = three_setE < three_setA
+three_b = three_setE < three_setA # checks if e is a strict subset of set a
 print("The answer to 3.b is: ", three_b)
 
 three_c = three_setA.intersection(three_setB)
@@ -256,25 +256,25 @@ print("The answer to 4.b is: ", four_b)
 four_b.append(type(four_a))
 print("The answer to 4.c is: ", four_b)
 
-four_b.append(0.39)
+four_b.append(0.39) # appended 0.39 to list four_b
 print("The answer to 4.d is: ", four_b)
 
-four_b.append(type(0.39))
+four_b.append(type(0.39)) 
 print("The answer to 4.e is: ", four_b)
 
 
-four_f = round(0.39**10, 0)
-four_b.append(four_f)
+four_f = round(0.39**10, 0) # rounded 0.39 ** 10 to no decimal which equal 0.0
+four_b.append(four_f) 
 print("The answer to 4.f is: ", four_b)
 
-four_b.append(type(four_f))
+four_b.append(type(four_f)) 
 print("The answer to 4.g is: ", four_b)
 
 
 print("Assignment 5")
 
 
-five_a = {
+five_a = { #manually created list where values are items and keys are there index
     "0" : four_b[0],
     "1" : four_b[1],
     "2" : four_b[2],
@@ -283,25 +283,28 @@ five_a = {
 }
 print("The answer to 5.a is: ", five_a)
 
-four_b.append(str(300)) # I am not sure where I need to add 300 because its not said in the task
+four_b.append(str(300)) # I am not sure where I need to add 300 because its not said in the task, so I appended it to four_b
 print("The answer to 5.b is: ", four_b)
 
-four_b.append(type(four_b[5])) # I am not sure where I need to add 300 because its not said in the task
+four_b.append(type(four_b[5])) # I am not sure where I need to add type of 300 because its not said in the task, so I appended it to four_b
 print("The answer to 5.c is: ", four_b)
 
 slice_string = four_b[5] #getting "300" from list in order to slice it
-slice_string = slice_string[:2]
+slice_string = slice_string[:2] #slicing it to the second element
 print("The answer to 5.d is: ", slice_string)
 
-four_b.append(type(slice_string))
+four_b.append(type(slice_string)) # its not said which type I should appened, so I appended type of slice_string
 print("The answer to 5.e is: ", four_b)
 
-five_f = [int(four_b[1]), int(four_b[3]), int(four_b[5]) ]
+five_f = [int(four_b[1]), int(four_b[3]), int(four_b[5]) ] #created list which contained all possible integers from four_b
 print("The answer to 5.f is: ", five_f)
 
-four_b.append(type(five_f))
+four_b.append(type(five_f)) #its not said in the task which type I should append so I appened type of five_f
 print("The answer to 5.g is: ", four_b)
 
+four_b.append(type(three_setA))
+print("The answer to 5.h is: ", four_b)
+#Hello, since it wasn't mentioned in most tasks, every method which I was supposed to perform I performed on the first variable of certain type (except the exercise 4). If it was said to do method on set I did on the first one I created, not the last changed version where I appended or changed anything
 four_b.append(type(three_setA))
 print("The answer to 5.h is: ", four_b)
 #Hello, since it wasn't mentioned in most tasks, every method which I was supposed to perform I performed on the first variable of certain type (except the exercise 4). If it was said to do method on set I did on the first one I created, not the last changed version where I appended or changed anything
