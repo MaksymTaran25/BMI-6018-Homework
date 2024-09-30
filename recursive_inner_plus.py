@@ -14,7 +14,7 @@ def minimize_list(list): #function to remove integers and get to the deeper list
             list.append(item) # append to cleared version of original list
     
     while len(input_list) != count_items(input_list): 
-        minimize_list(input_list) # function calls itself (recursion)
+        minimize_list(list) # function calls itself (recursion)
     
 def count_items(provided_list): # function to count all integers
     count = 0
