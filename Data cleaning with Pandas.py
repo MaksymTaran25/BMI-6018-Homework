@@ -8,12 +8,12 @@ flights_data = pd.read_csv('flights.csv')
 flights_data.head(10)
 
 flights_data.drop(columns=flights_data.columns[0], axis=1, inplace=True) # For some reason after importing data, there was a new "Unnamed: 0" column, which from my point of view is irrelevant because it were just indexes. So I removed it.
-flights_data.index = flights_data.index + 1 # To start indexing from 1 instead of 0 (I just find even more convenient)
+flights_data.index = flights_data.index + 1 # To start indexing from 1 instead of 0 (I just find it more convenient)
 
 weather_data_pd = pd.read_csv('weather.csv')
 
 weather_data_pd.drop(columns=weather_data_pd.columns[0], axis=1, inplace=True) # For some reason after importing data, there was a new "Unnamed: 0" column, which from my point of view is irrelevant because it were just indexes. So I removed it.
-weather_data_pd.index = weather_data_pd.index + 1 # To start indexing from 1 instead of 0 (I just find even more convenient)
+weather_data_pd.index = weather_data_pd.index + 1 # To start indexing from 1 instead of 0 (I just find it more convenient)
 
 weather_data_np = weather_data_pd.to_numpy()
 
